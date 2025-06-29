@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <title>robloxmod</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Tahoma', sans-serif;
@@ -19,16 +21,19 @@
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
     }
+
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
     h2 {
       font-size: 24px;
       margin-bottom: 20px;
       color: #0ff;
     }
+
     .progress-bar-container {
       width: 90%;
       max-width: 360px;
@@ -38,12 +43,14 @@
       margin: 20px auto;
       overflow: hidden;
     }
+
     .progress-bar {
       height: 100%;
       width: 0%;
       background: lime;
       transition: width 0.4s ease;
     }
+
     .step {
       display: none;
       align-items: center;
@@ -60,17 +67,21 @@
       transform: translateY(20px);
       animation: fadeInUp 0.6s ease forwards;
     }
+
     .step.active {
       display: flex;
     }
+
     .step.completed {
       border-color: lime;
       background-color: #141414;
     }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     a {
       color: white;
       text-decoration: none;
@@ -79,6 +90,7 @@
       width: 100%;
       justify-content: space-between;
     }
+
     .loading {
       display: inline-block;
       width: 16px;
@@ -88,18 +100,22 @@
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
+
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     .final-section {
       margin-top: 30px;
     }
+
     .final-message {
       font-size: 18px;
       margin-bottom: 10px;
       color: red;
     }
+
     .final-buttons {
       background: #111;
       border-radius: 12px;
@@ -109,6 +125,7 @@
       margin: auto;
       box-shadow: 0 0 10px #0ff3;
     }
+
     .final-buttons a {
       display: block;
       background-color: #555;
@@ -125,14 +142,17 @@
       opacity: 0.5;
       transition: 0.3s;
     }
+
     .final-buttons a.active {
       background-color: #0c0;
       pointer-events: auto;
       opacity: 1;
     }
+
     .final-buttons a#btnRobux.active {
       background-color: dodgerblue;
     }
+
     @media (max-width: 480px) {
       body {
         padding: 20px 2vw;
@@ -165,21 +185,21 @@
   <div id="step1" class="step active">
     <a href="#" onclick="completeStep(1, 'https://www.youtube.com/@MRGAMESFF-k3q'); return false;">
       <span id="check1">➡️</span>
-      <span style="direction: ltr;">📺🔔 Subscribe to Channel 1</span>
+      <span style="direction: ltr;">📺🔔 Subscribe to Channel 1, and turn on the notification bell </span>
     </a>
   </div>
 
   <div id="step2" class="step">
     <a href="#" onclick="completeStep(2, 'https://www.youtube.com/@DarkPanda-DP'); return false;">
       <span id="check2">➡️</span>
-      <span style="direction: ltr;">📺🔔 Subscribe to Channel 2</span>
+      <span style="direction: ltr;">📺🔔 Subscribe to Channel 2, and turn on the notification bell</span>
     </a>
   </div>
 
   <div id="step3" class="step">
     <a href="#" onclick="rotateStepLinks(3); return false;">
       <span id="check3">➡️</span>
-      <span style="direction: ltr;">👍💬 Like and comment on the video</span>
+      <span style="direction: ltr;">👍💬 Like the video you see, and leave a comment</span>
     </a>
   </div>
 
@@ -224,6 +244,7 @@
       setTimeout(() => {
         document.getElementById('step' + step).classList.add('completed');
         checkSpan.innerText = '✅';
+
         updateProgress(step);
         unlockButtons();
       }, 10000);
@@ -235,14 +256,9 @@
     }
 
     function unlockButtons() {
-      const step1 = document.getElementById('step1');
-      const step2 = document.getElementById('step2');
-      const step3 = document.getElementById('step3');
-
-      const allCompleted =
-        step1.classList.contains('completed') &&
-        step2.classList.contains('completed') &&
-        step3.classList.contains('completed');
+      const allCompleted = [1, 2, 3].every(i =>
+        document.getElementById('step' + i).classList.contains('completed')
+      );
 
       if (allCompleted) {
         document.getElementById('finalMessage').innerText = '✅ !All steps completed';
@@ -254,7 +270,7 @@
         btnDownload.classList.add('active');
         btnRobux.classList.add('active');
 
-        // ✅ استبدال نص الأزرار بالقفل المفتوح
+        // ✅ تغيير القفل إلى مفتوح
         btnDownload.innerHTML = '🔓 Download Roblox Mod';
         btnRobux.innerHTML = '🔓 Get Free Robux';
       }
@@ -271,5 +287,3 @@
 
 </body>
 </html>
-
-ممم
