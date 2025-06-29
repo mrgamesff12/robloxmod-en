@@ -3,26 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>robloxmod</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-      overflow-x: hidden;
+    body {
       background: #000;
       color: white;
       font-family: 'Tahoma', sans-serif;
       text-align: center;
-    }
-
-    body {
-      padding: 20px 10px;
+      padding: 50px 10px;
+      margin: 0;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
 
     .step {
@@ -35,11 +26,12 @@
       padding: 15px 20px;
       margin: 15px auto;
       width: 100%;
-      max-width: 400px;
+      max-width: 350px;
       box-shadow: 0 0 10px #0ff2;
       opacity: 0.4;
       pointer-events: none;
       transition: 0.3s;
+      box-sizing: border-box;
     }
 
     .step.active {
@@ -71,10 +63,9 @@
     }
 
     h2 {
-      font-size: 22px;
-      margin: 25px auto;
+      font-size: 24px;
+      margin-bottom: 30px;
       color: #0ff;
-      max-width: 400px;
     }
 
     .loading {
@@ -108,9 +99,10 @@
       border: 2px solid #444;
       padding: 15px 10px;
       width: 100%;
-      max-width: 400px;
+      max-width: 380px;
       margin: auto;
       box-shadow: 0 0 10px #0ff3;
+      box-sizing: border-box;
     }
 
     .final-buttons a {
@@ -123,11 +115,12 @@
       font-weight: bold;
       margin: 10px auto;
       width: 100%;
-      max-width: 360px;
+      max-width: 350px;
       text-align: center;
       pointer-events: none;
       opacity: 0.5;
       transition: 0.3s;
+      box-sizing: border-box;
     }
 
     .final-buttons a.active {
@@ -140,33 +133,52 @@
       background-color: dodgerblue;
     }
 
-    @media (max-width: 400px) {
-      h2 {
-        font-size: 18px;
+    /* Responsive design */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 2vw;
       }
-
+      .step, .final-buttons {
+        max-width: 100%;
+        width: 100%;
+        padding: 12px 5vw;
+      }
+      .final-buttons a {
+        max-width: 100%;
+        width: 100%;
+        font-size: 15px;
+        padding: 12px 5px;
+      }
+      h2 {
+        font-size: 19px;
+        margin-bottom: 18px;
+      }
+      .final-message {
+        font-size: 15px;
+      }
       .step span {
         font-size: 14px;
       }
+    }
 
-      .final-message {
-        font-size: 16px;
+    @media (max-width: 340px) {
+      .step, .final-buttons {
+        padding: 8px 0;
       }
-
-      .final-buttons a {
-        font-size: 15px;
+      .step span, .final-buttons a, .final-message {
+        font-size: 12px;
       }
     }
   </style>
 </head>
 <body>
 
-  <h2>Complete these steps first to unlock the download links</h2>
+  <h2>أكمل هذه الخطوات أولاً لفتح روابط التحميل</h2>
 
   <div id="step1" class="step active">
     <a href="#"
        onclick="completeStep(1, 'https://www.youtube.com/@MRGAMESFF-k3q'); return false;"
-       style="display: flex; flex-direction: row-reverse; align-items: center; gap: 8px;">
+       style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
       <span id="check1">➡️</span>
       <span style="direction: ltr; display: flex; align-items: center; gap: 6px;">
         <span style="white-space: nowrap;">📺🔔</span>
@@ -178,7 +190,7 @@
   <div id="step2" class="step">
     <a href="#"
        onclick="completeStep(2, 'https://www.youtube.com/@DarkPanda-DP'); return false;"
-       style="display: flex; flex-direction: row-reverse; align-items: center; gap: 8px;">
+       style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
       <span id="check2">➡️</span>
       <span style="direction: ltr; display: flex; align-items: center; gap: 6px;">
         <span style="white-space: nowrap;">📺🔔</span>
@@ -189,7 +201,7 @@
 
   <div id="step3" class="step">
     <a href="#" onclick="rotateStepLinks(3); return false;"
-       style="display: flex; flex-direction: row-reverse; align-items: center; gap: 8px;">
+      style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
       <span id="check3">➡️</span>
       <span style="direction: ltr; display: flex; align-items: center; gap: 6px;">
         <span style="white-space: nowrap;">👍💬</span>
@@ -199,10 +211,10 @@
   </div>
 
   <div class="final-section">
-    <div id="finalMessage" class="final-message">❌ Complete the steps first to unlock the download links</div>
+    <div id="finalMessage" class="final-message">❌ أكمل الخطوات أولاً لفتح روابط التحميل</div>
     <div class="final-buttons">
-      <a id="btnDownload" href="#" onclick="goToDownload(); return false;">🔒 Click here to download Roblox mod</a>
-      <a id="btnRobux" href="#" onclick="goToRobux(); return false;">🔒 Click here to learn how to get free Robux</a>
+      <a id="btnDownload" href="#" onclick="goToDownload(); return false;">🔒 اضغط هنا لتحميل مود روبلوكس</a>
+      <a id="btnRobux" href="#" onclick="goToRobux(); return false;">🔒 اضغط هنا لتعلم كيفية الحصول على روبوكس مجاناً</a>
     </div>
   </div>
 
@@ -246,7 +258,7 @@
         document.getElementById('step' + (i + 1)).classList.contains('completed')
       );
       if (allCompleted) {
-        document.getElementById('finalMessage').innerText = '✅ All steps have been completed successfully';
+        document.getElementById('finalMessage').innerText = '✅ تم إكمال جميع الخطوات بنجاح';
         document.getElementById('finalMessage').style.color = 'lime';
 
         const btnDownload = document.getElementById('btnDownload');
@@ -255,8 +267,8 @@
         btnDownload.classList.add('active');
         btnRobux.classList.add('active');
 
-        btnDownload.innerText = '🔓 Click here to download Roblox mod';
-        btnRobux.innerText = '🔓 Click here to learn how to get free Robux';
+        btnDownload.innerText = '🔓 اضغط هنا لتحميل مود روبلوكس';
+        btnRobux.innerText = '🔓 اضغط هنا لتعلم كيفية الحصول على روبوكس مجاناً';
       }
     }
 
@@ -268,5 +280,6 @@
       window.open('https://darkpanda-dp.blogspot.com/2025/06/how-to-get-1000-robux-in-roblox-for-free.html', '_blank');
     }
   </script>
+
 </body>
 </html>
