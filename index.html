@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>robloxmod</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
       background: #000;
       color: white;
       font-family: 'Tahoma', sans-serif;
       text-align: center;
-      padding: 30px 10px;
-      margin: 0;
+    }
+
+    body {
+      padding: 20px 10px;
     }
 
     .step {
@@ -61,8 +72,9 @@
 
     h2 {
       font-size: 22px;
-      margin-bottom: 25px;
+      margin: 25px auto;
       color: #0ff;
+      max-width: 400px;
     }
 
     .loading {
