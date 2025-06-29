@@ -235,9 +235,14 @@
     }
 
     function unlockButtons() {
-      const allCompleted = [1, 2, 3].every(i =>
-        document.getElementById('step' + i).classList.contains('completed')
-      );
+      const step1 = document.getElementById('step1');
+      const step2 = document.getElementById('step2');
+      const step3 = document.getElementById('step3');
+
+      const allCompleted =
+        step1.classList.contains('completed') &&
+        step2.classList.contains('completed') &&
+        step3.classList.contains('completed');
 
       if (allCompleted) {
         document.getElementById('finalMessage').innerText = '✅ !All steps completed';
@@ -249,7 +254,7 @@
         btnDownload.classList.add('active');
         btnRobux.classList.add('active');
 
-        // ✅ تغيير القفل المغلق إلى قفل مفتوح
+        // ✅ استبدال نص الأزرار بالقفل المفتوح
         btnDownload.innerHTML = '🔓 Download Roblox Mod';
         btnRobux.innerHTML = '🔓 Get Free Robux';
       }
@@ -267,4 +272,4 @@
 </body>
 </html>
 
-صص
+ممم
