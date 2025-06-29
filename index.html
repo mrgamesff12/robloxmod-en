@@ -10,7 +10,7 @@
       color: white;
       font-family: 'Tahoma', sans-serif;
       text-align: center;
-      padding: 50px 10px;
+      padding: 30px 10px;
       margin: 0;
     }
 
@@ -23,8 +23,8 @@
       border-radius: 12px;
       padding: 15px 20px;
       margin: 15px auto;
-      max-width: 95%;
-      box-sizing: border-box;
+      width: 100%;
+      max-width: 400px;
       box-shadow: 0 0 10px #0ff2;
       opacity: 0.4;
       pointer-events: none;
@@ -60,8 +60,8 @@
     }
 
     h2 {
-      font-size: 24px;
-      margin-bottom: 30px;
+      font-size: 22px;
+      margin-bottom: 25px;
       color: #0ff;
     }
 
@@ -95,9 +95,9 @@
       border-radius: 12px;
       border: 2px solid #444;
       padding: 15px 10px;
-      max-width: 95%;
+      width: 100%;
+      max-width: 400px;
       margin: auto;
-      box-sizing: border-box;
       box-shadow: 0 0 10px #0ff3;
     }
 
@@ -110,12 +110,12 @@
       font-size: 16px;
       font-weight: bold;
       margin: 10px auto;
-      max-width: 95%;
+      width: 100%;
+      max-width: 360px;
       text-align: center;
       pointer-events: none;
       opacity: 0.5;
       transition: 0.3s;
-      box-sizing: border-box;
     }
 
     .final-buttons a.active {
@@ -128,20 +128,21 @@
       background-color: dodgerblue;
     }
 
-    /* ✅ Media Queries لجعل الصفحة متجاوبة */
-    @media (max-width: 480px) {
+    @media (max-width: 400px) {
       h2 {
         font-size: 18px;
       }
+
       .step span {
         font-size: 14px;
       }
+
       .final-message {
         font-size: 16px;
       }
+
       .final-buttons a {
-        font-size: 14px;
-        padding: 10px;
+        font-size: 15px;
       }
     }
   </style>
@@ -151,7 +152,9 @@
   <h2>Complete these steps first to unlock the download links</h2>
 
   <div id="step1" class="step active">
-    <a href="#" onclick="completeStep(1, 'https://www.youtube.com/@MRGAMESFF-k3q'); return false;" style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
+    <a href="#"
+       onclick="completeStep(1, 'https://www.youtube.com/@MRGAMESFF-k3q'); return false;"
+       style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
       <span id="check1">➡️</span>
       <span style="direction: ltr; display: flex; align-items: center; gap: 6px;">
         <span style="white-space: nowrap;">📺🔔</span>
@@ -161,7 +164,9 @@
   </div>
 
   <div id="step2" class="step">
-    <a href="#" onclick="completeStep(2, 'https://www.youtube.com/@DarkPanda-DP'); return false;" style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
+    <a href="#"
+       onclick="completeStep(2, 'https://www.youtube.com/@DarkPanda-DP'); return false;"
+       style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
       <span id="check2">➡️</span>
       <span style="direction: ltr; display: flex; align-items: center; gap: 6px;">
         <span style="white-space: nowrap;">📺🔔</span>
@@ -171,7 +176,8 @@
   </div>
 
   <div id="step3" class="step">
-    <a href="#" onclick="rotateStepLinks(3); return false;" style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
+    <a href="#" onclick="rotateStepLinks(3); return false;"
+       style="display: flex; flex-direction: row; align-items: center; gap: 8px;">
       <span id="check3">➡️</span>
       <span style="direction: ltr; display: flex; align-items: center; gap: 6px;">
         <span style="white-space: nowrap;">👍💬</span>
@@ -250,6 +256,5 @@
       window.open('https://darkpanda-dp.blogspot.com/2025/06/how-to-get-1000-robux-in-roblox-for-free.html', '_blank');
     }
   </script>
-
 </body>
 </html>
