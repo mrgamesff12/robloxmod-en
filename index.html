@@ -176,7 +176,7 @@
 </head>
 <body>
 
-  <h2>Complete these steps to unlock the download links</h2>
+  <h2>أكمل هذه الخطوات لفتح روابط التحميل</h2>
 
   <div class="progress-bar-container">
     <div id="progressBar" class="progress-bar"></div>
@@ -185,29 +185,29 @@
   <div id="step1" class="step active">
     <a href="#" onclick="completeStep(1, 'https://www.youtube.com/@MRGAMESFF-k3q'); return false;">
       <span id="check1">➡️</span>
-      <span style="direction: ltr;">📺🔔 Subscribe to Channel 1</span>
+      <span style="direction: ltr;">📺🔔 اشترك في القناة الأولى</span>
     </a>
   </div>
 
   <div id="step2" class="step">
     <a href="#" onclick="completeStep(2, 'https://www.youtube.com/@DarkPanda-DP'); return false;">
       <span id="check2">➡️</span>
-      <span style="direction: ltr;">📺🔔 Subscribe to Channel 2</span>
+      <span style="direction: ltr;">📺🔔 اشترك في القناة الثانية</span>
     </a>
   </div>
 
   <div id="step3" class="step">
     <a href="#" onclick="rotateStepLinks(3); return false;">
       <span id="check3">➡️</span>
-      <span style="direction: ltr;">👍💬 Like and comment on the video</span>
+      <span style="direction: ltr;">👍💬 قم بالإعجاب والتعليق على الفيديو</span>
     </a>
   </div>
 
   <div class="final-section">
-    <div id="finalMessage" class="final-message">❌ Please complete all steps first</div>
+    <div id="finalMessage" class="final-message">❌ الرجاء إكمال جميع الخطوات أولاً</div>
     <div class="final-buttons" id="finalButtons">
-      <a id="btnDownload" href="#" onclick="goToDownload(); return false;">🔒 Download Roblox Mod</a>
-      <a id="btnRobux" href="#" onclick="goToRobux(); return false;">🔒 Get Free Robux</a>
+      <a id="btnDownload" href="#" onclick="goToDownload(); return false;">🔒 تحميل Roblox Mod</a>
+      <a id="btnRobux" href="#" onclick="goToRobux(); return false;">🔒 الحصول على روبوكس مجاني</a>
     </div>
   </div>
 
@@ -261,7 +261,7 @@
       );
 
       if (allCompleted) {
-        document.getElementById('finalMessage').innerText = '✅ !All steps completed';
+        document.getElementById('finalMessage').innerText = '✅ !تم إكمال جميع الخطوات';
         document.getElementById('finalMessage').style.color = 'lime';
 
         const btnDownload = document.getElementById('btnDownload');
@@ -270,9 +270,9 @@
         btnDownload.classList.add('active');
         btnRobux.classList.add('active');
 
-        // تغيير القفل إلى مفتوح
-        btnDownload.innerText = '🔓 Download Roblox Mod';
-        btnRobux.innerText = '🔓 Get Free Robux';
+        // غير القفل إلى مفتوح
+        btnDownload.innerHTML = '🔓 تحميل Roblox Mod';
+        btnRobux.innerHTML = '🔓 الحصول على روبوكس مجاني';
       }
     }
 
@@ -288,4 +288,4 @@
 </body>
 </html>
 
-سسسس
+سشسس
