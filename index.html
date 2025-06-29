@@ -173,7 +173,7 @@
 </head>
 <body>
 
-  <h2>أكمل هذه الخطوات أولاً لفتح روابط التحميل</h2>
+  <h2>Complete these steps first to unlock the download links</h2>
 
   <div id="step1" class="step active">
     <a href="#"
@@ -211,10 +211,10 @@
   </div>
 
   <div class="final-section">
-    <div id="finalMessage" class="final-message">❌ أكمل الخطوات أولاً لفتح روابط التحميل</div>
+    <div id="finalMessage" class="final-message">❌ Complete the steps first to unlock the download links</div>
     <div class="final-buttons">
-      <a id="btnDownload" href="#" onclick="goToDownload(); return false;">🔒 اضغط هنا لتحميل مود روبلوكس</a>
-      <a id="btnRobux" href="#" onclick="goToRobux(); return false;">🔒 اضغط هنا لتعلم كيفية الحصول على روبوكس مجاناً</a>
+      <a id="btnDownload" href="#" onclick="goToDownload(); return false;">🔒 Click here to download Roblox mod</a>
+      <a id="btnRobux" href="#" onclick="goToRobux(); return false;">🔒 Click here to learn how to get free Robux</a>
     </div>
   </div>
 
@@ -258,7 +258,7 @@
         document.getElementById('step' + (i + 1)).classList.contains('completed')
       );
       if (allCompleted) {
-        document.getElementById('finalMessage').innerText = '✅ تم إكمال جميع الخطوات بنجاح';
+        document.getElementById('finalMessage').innerText = '✅ All steps have been completed successfully';
         document.getElementById('finalMessage').style.color = 'lime';
 
         const btnDownload = document.getElementById('btnDownload');
@@ -267,8 +267,8 @@
         btnDownload.classList.add('active');
         btnRobux.classList.add('active');
 
-        btnDownload.innerText = '🔓 اضغط هنا لتحميل مود روبلوكس';
-        btnRobux.innerText = '🔓 اضغط هنا لتعلم كيفية الحصول على روبوكس مجاناً';
+        btnDownload.innerText = '🔓 Click here to download Roblox mod';
+        btnRobux.innerText = '🔓 Click here to learn how to get free Robux';
       }
     }
 
