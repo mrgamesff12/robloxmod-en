@@ -233,7 +233,7 @@
 
         updateProgress(step);
         unlockButtons();
-      }, 6000);
+      }, 10000);
     }
 
     function rotateStepLinks(step) {
@@ -247,7 +247,7 @@
 
         updateProgress(step);
         unlockButtons();
-      }, 6000);
+      }, 10000);
     }
 
     function updateProgress(step) {
@@ -261,7 +261,7 @@
       );
 
       if (allCompleted) {
-        document.getElementById('finalMessage').innerText = '✅ All steps completed!';
+        document.getElementById('finalMessage').innerText = '✅ !All steps completed';
         document.getElementById('finalMessage').style.color = 'lime';
 
         const btnDownload = document.getElementById('btnDownload');
